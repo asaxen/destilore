@@ -17,7 +17,6 @@ import { connect } from 'react-redux';
 
 import { doFetchArticles, doFetchArticle } from '../Actions/articles'
 
-
 const rootStyle = {
     flexGrow: 1,
     paddingTop:10
@@ -70,7 +69,7 @@ class Articles extends React.Component{
                 <Grid container spacing={2}>
                 {
                 Object.entries(this.prepareArticles(this.props.filter)).map(([id, article]) => (
-                    <Grid item xs={4} >
+                    <Grid item xs={12} sm={6} md={4} lg={2}>
                         <Card style={cardStyle}>
                             <CardActionArea onClick={() => {
                                 this.props.history.push(
